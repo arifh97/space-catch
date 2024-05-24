@@ -1,0 +1,103 @@
+.tokenomics {
+    background-color: $bg;
+    & h2 {
+        @include text-shadow;
+    }
+    &-percentage {
+        width: 550px;
+        @include xl {
+            width: 100%;
+        }
+        @include lg {
+            width: 100%;
+        }
+        @include mmd {
+            width: 100%;
+        }
+        &-item {
+            & .line {
+                display: block;
+                width: 100%;
+                height: 24px;
+                border-radius: 93px;
+                background-color: #D5FEFF;
+                margin-bottom: 14px;
+                position: relative;
+                z-index: 1;
+                @include mmd {
+                    height: 20px;
+                }
+                &-wrap {
+                    position: absolute;
+                    z-index: 2;
+                    width: 50%;
+                    height: 100%;
+                    background-color: #E16DDF;
+                    border-radius: 93px;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 24px;
+                @include mmd {
+                    margin-bottom: 20px;
+                }
+            }
+            // &:nth-child(2) {
+            //     & .line {
+            //         &-wrap {
+            //             width: 10%;
+            //             background-color: #FED41D;
+            //         }
+            //     }
+            // }
+            // &:nth-child(3) {
+            //     & .line {
+            //         &-wrap {
+            //             width: 15%;
+            //             background-color: #FA7C29;
+            //         }
+            //     }
+            // }
+            // &:nth-child(4) {
+            //     & .line {
+            //         &-wrap {
+            //             width: 25%;
+            //             background-color: #033FD5;
+            //         }
+            //     }
+            // }
+            & .text {
+                & p {
+                    @include font-24;
+                }
+            }
+        }
+    }
+    &-chart {
+        --width: 590px;
+        width: var(--width);
+        height: var(--width);
+        border-radius: 100%;
+        border: 3px solid #EBF8FF;
+        background-color: #CDEEFF;
+        padding: 30px;
+        @include xl {
+            --width: 480px;
+        }
+        @include lg {
+            --width: 450px;
+        }
+        @include mmd {
+            padding: 0px;
+            --width: 330px;
+        }
+        @include sm {
+            --width: 350px;
+            padding: 0px;
+            margin-top: 24px;
+        }
+    }
+    &-logo {
+        transform: translate(-50%, -50%);
+    }
+}

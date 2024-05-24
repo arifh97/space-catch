@@ -1,0 +1,156 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-2;
+    color: $heading;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.common {
+    &-svg {
+        display: inline-block;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+    }
+    &-row {
+        --bs-gutter-x: 32px;
+        margin-bottom: calc(var(--bs-gutter-x) * -1);
+        @include mmd {
+            --bs-gutter-x: 24px;
+        }
+        &>div {
+            margin-bottom: var(--bs-gutter-x);
+        }
+    }
+    &-padding {
+        --padding-y: 120px;
+        --padding-x: 0;
+        padding: var(--padding-y) var(--padding-x);
+        @include xl {
+            --padding-y: 100px;
+        }
+        @include lg {
+            --padding-y: 100px;
+        }
+        @include md {
+            --padding-y: 80px;
+        }
+        @include sm {
+            --padding-y: 60px;
+        }
+        &-top {
+            padding-top: var(--padding-y);
+        }
+    }
+    &-title {
+        margin-bottom: 60px;
+        @media (min-width: 1440px) {
+            padding: 0 4%;
+        }
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 30px;
+        }
+        & h2 {
+            @include font-68;
+        }
+        & p {
+            @include font-20;
+        }
+    }
+}
+
+.btn {
+    background: conic-gradient(from 0deg at 50% 50%, #EEE578 0deg, #D3A034 360deg);
+    color: $black;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 20px;
+    text-transform: uppercase;
+}
+
+// social 
+.social {
+    &-link {
+        --width: 48px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $primary;
+        color: $heading;
+        box-shadow: 2px 2px 0 $black;
+        @include font-24;
+        &:hover {
+            box-shadow: 0 0 0;
+        }
+        @include sm {
+            --width: 38px;
+            & svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}

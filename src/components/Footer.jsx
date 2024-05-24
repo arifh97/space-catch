@@ -77,7 +77,7 @@ export default function Footer() {
     },
   ];
   return (
-    <div className="footer bg-black">
+    <div className="footer bg-black position-relative z-1">
       <Container>
         <Row>
           <Col xs={12}>

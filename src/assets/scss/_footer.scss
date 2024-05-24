@@ -1,4 +1,16 @@
 .footer {
+    &::before {
+        content: "";
+        --width: 60px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $black;
+        position: absolute;
+        left: calc(var(--width) / 2 * -1);
+        top: calc(var(--width) / 2 * -1);
+        transform: rotate(45deg);
+        z-index: -1;
+    }
     &-wrap {
         padding: 60px 0;
     }

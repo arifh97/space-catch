@@ -1,0 +1,7 @@
+.banner {
+    padding-top: var(--padding-top, 220px);
+    padding-bottom: var(--padding-bottom, 170px);
+    &-img {
+        padding-bottom: 100%;
+    }
+}

@@ -1,98 +1,49 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState, useEffect, useRef } from 'react';
+// import { useState, useEffect, useRef } from 'react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
-import { Col, Container, Row } from 'react-bootstrap';
+import img_1 from '../assets/img/banner/1.png'
+import img_2 from '../assets/img/banner/2.png'
+import img_3 from '../assets/img/banner/3.png'
+import img_4 from '../assets/img/banner/4.png'
+
+// import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Slider() {
-
-
-    const [isPrevSlide, setIsPrevSlide] = useState(true);
-    const [isNextSlide, setIsNextSlide] = useState(false);
-    const swiperRef = useRef(null);
-    useEffect(() => {
-        const swiperInstance = swiperRef.current?.swiper;
-        if (swiperInstance) {
-            setIsPrevSlide(swiperInstance.isBeginning);
-            setIsNextSlide(swiperInstance.isEnd);
-        }
-    }, []);
-    const prevSlide = () => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slidePrev();
-        }
-    };
-    const nextSlide = () => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideNext();
-        }
-    };
-    const handleSlideChange = () => {
-        const swiperInstance = swiperRef.current?.swiper;
-        if (swiperInstance) {
-            setIsPrevSlide(swiperInstance.isBeginning);
-            setIsNextSlide(swiperInstance.isEnd);
-        }
-    };
+    const banner = [img_1, img_2, img_3, img_4];
     return (
-        <div data-aos="fade-up" data-aos-duration="" data-aos-delay="" data-aos-offset="0">
+        <div className='position-absolute top-0 start-0 w-100 h-100 z-n1'>
             <Swiper
                 className='testimonial-slider'
-                breakpoints={{
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    481: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    992: {
-                        slidesPerView: 3,
-                        spaceBetween: 24,
-                    }
+                slidesPerView={1}
+                spaceBetween={0}
+                // }}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
                 }}
                 centeredSlides={false}
-                pagination={false}
+                pagination={{
+                    clickable: true,
+                }}
                 grabCursor={true}
+                navigation={false}
                 loop={true}
-                onSlideChange={handleSlideChange}
-                ref={swiperRef}
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
             >
-                <SwiperSlide>
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </SwiperSlide>
+                {banner.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="banner-img w-100 h-100 position-relative z-1">
+                            <img className='w-100 h-100 object-fit-cover position-absolute top-0 start-0' src={item} alt="" />
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
-            <div className="swiper-nav d-flex align-items-center justify-content-center gap-2" data-aos="fade-up" data-aos-duration="" data-aos-delay="" data-aos-offset="0">
-                <button className="d-flex align-items-center justify-content-center me-1 p-0" title='previous' onClick={prevSlide} disabled={isPrevSlide}>
-                    <FaArrowLeft />
-                </button>
-                <button className="d-flex align-items-center justify-content-center p-0" title='previous' onClick={nextSlide} disabled={isNextSlide}>
-                    <FaArrowRight />
-                </button>
-            </div>
         </div>
     )
 }

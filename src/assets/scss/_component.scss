@@ -9,13 +9,15 @@
 
 .accordion {
     &-item {
-        --bs-accordion-border-radius: 12px;
-        --bs-accordion-bg: #151514;
+        --bs-accordion-border-radius: 0;
+        --bs-accordion-bg: transparent;
         --bs-accordion-border-color: #2D2D2C;
-        --bs-accordion-btn-bg: transparent;
-        --bs-accordion-active-bg: #1d1d1c;
-        --padding: 32px;
+        --bs-accordion-btn-bg: #fff;
+        --bs-accordion-active-bg: #fff;
+        --padding: 30px;
+        border: none;
         overflow: hidden;
+        border-radius: 10px;
         @include md {
             --padding: 26px;
         }
@@ -23,7 +25,7 @@
             --padding: 20px;
         }
         &:not(:last-child) {
-            border-bottom: 1px solid var(--bs-accordion-border-color);
+            margin-bottom: 16px;
         }
     }
     &-button {
@@ -45,8 +47,13 @@
     &-body {
         padding: var(--padding) !important;
         padding-top: 0 !important;
-        color: $text;
-        @include font-20;
         background-color: var(--bs-accordion-active-bg);
+        & p {
+            color: currentColor;
+            font-size: 1rem;
+            color: $black;
+            font-weight: 500;
+            line-height: 160%;
+        }
     }
 }

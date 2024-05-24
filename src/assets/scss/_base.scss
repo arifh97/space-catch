@@ -3,7 +3,7 @@ body {
     font-weight: 400;
     line-height: calc(26px/16px);
     color: $text;
-    font-family: $font-1;
+    font-family: $font-2;
     background-color: $bg;
 }
 
@@ -13,12 +13,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-2;
+    font-family: $font-3;
     color: $heading;
     font-weight: 500;
     margin: 0 0 10px;
 }
-
+h2{
+    @include font-42;
+}
+h4{
+    @include font-26;
+}
 p {
     margin: 0;
 }

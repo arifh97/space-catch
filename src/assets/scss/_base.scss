@@ -18,12 +18,15 @@ h6 {
     font-weight: 500;
     margin: 0 0 10px;
 }
-h2{
+
+h2 {
     @include font-42;
 }
-h4{
+
+h4 {
     @include font-26;
 }
+
 p {
     margin: 0;
 }
@@ -130,32 +133,37 @@ input[type=number] {
 }
 
 .btn {
-    background: conic-gradient(from 0deg at 50% 50%, #EEE578 0deg, #D3A034 360deg);
-    color: $black;
+    background: conic-gradient(from var(--deg, 0deg) at 50% 50%, #EEE578 0deg, #D3A034 360deg);
+    color: $black !important;
     --bs-btn-padding-y: 10px;
     --bs-btn-padding-x: 20px;
     text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    &:hover {
+        --deg: 180deg;
+    }
 }
 
 // social 
 .social {
     &-link {
-        --width: 48px;
+        --width: 35px;
         width: var(--width);
         height: var(--width);
-        background-color: $primary;
-        color: $heading;
-        box-shadow: 2px 2px 0 $black;
-        @include font-24;
+        background-color: $white;
+        border: 1px solid rgba($color: $white, $alpha: .50);
+        color: $black;
+        font-size: 18px;
         &:hover {
-            box-shadow: 0 0 0;
-        }
-        @include sm {
-            --width: 38px;
-            & svg {
-                width: 18px;
-                height: 18px;
-            }
+            background-color: $white;
+            color: $primary;
         }
     }
+}
+
+#root {
+    overflow: hidden;
 }

@@ -2,29 +2,34 @@ import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link} from 'react-scroll';
 import Logo from './Logo';
+import Social from './Social';
 
 
 export default function Header() {
   const navLinks = [
     {
-      btn_title: 'home',
+      btn_title: 'Home',
       to: 'banner'
     },
     {
-      btn_title: 'about us',
+      btn_title: 'About',
       to: 'about'
     },
     {
-      btn_title: 'pricing',
-      to: 'pricing'
+      btn_title: 'TOKEN',
+      to: 'tokenomics'
     },
     {
-      btn_title: 'blog',
-      to: 'blog'
+      btn_title: 'ROADMAP',
+      to: 'roadmap'
     },
     {
-      btn_title: 'contact us',
+      btn_title: 'CONTACT',
       to: 'contact'
+    },
+    {
+      btn_title: 'Roadmap',
+      to: 'roadmap'
     },
   ];
   const [isMenu, setIsMenu] = useState(false);
@@ -63,13 +68,14 @@ export default function Header() {
               <ul className="d-lg-flex align-items-center">
                 {navLinks.map((link, index) => (
                   <li key={index} className='d-block'>
-                    <Link className="heading-link text-capitalize" to={link.to} spy={true} smooth={true} duration={600} offset={0} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
+                    <Link className="heading-link" to={link.to} spy={true} smooth={true} duration={600} offset={-100} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
                   </li>
                 ))}
               </ul>
             </nav>
             <div className="heading-actions d-flex align-items-center flex-wrap">
-              <Link to='/login' className='btn'>site btn</Link>
+              <Social />
+              <a target='_blank' href='' className='btn'>STAKING</a>
               <button className="heading-toggler d-lg-none" onClick={() => setIsMenu(!isMenu)}>
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.08984 6H21.0898" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />

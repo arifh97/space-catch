@@ -7,34 +7,25 @@
     }
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .heading {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9;
-    background-color: trans;
+    background-color: rgba($color: $black, $alpha: .10);
+    backdrop-filter: blur(7px);
     padding: var(--bs-navbar-padding-y) 0;
-    --bs-navbar-padding-y: 30px;
-    @include md {
-        --bs-navbar-padding-y: 24px;
-    }
-    @include sm {
-        --bs-navbar-padding-y: 20px;
-    }
+    --bs-navbar-padding-y: 16px;
     &.position-fixed {
         animation: headerAnimation .5s linear;
-        background-color: rgba($color: $bg, $alpha: .6);
-        backdrop-filter: blur(3px);
-        --bs-navbar-padding-y: 24px;
-        @include md {
-            --bs-navbar-padding-y: 20px;
-        }
-        @include sm {
-            --bs-navbar-padding-y: 1rem;
-        }
     }
     &-menu {
+        margin-left: 140px;
         @include mmd {
             position: fixed;
             top: 0;
@@ -55,56 +46,43 @@
                 margin-bottom: 24px;
             }
         }
-        & .heading-actions {
-            @include mmd {
-                margin-top: 32px;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            @include sm {
-                margin-top: 26px;
-            }
-        }
     }
     &-link {
         font-size: 18px;
-        line-height: 150%;
-        color: #74787D;
+        line-height: 160%;
+        color: rgba($color: $white, $alpha: .70);
         font-weight: 400;
         font-family: $font-1;
         display: block;
         padding: 10px 1rem;
+        cursor: pointer;
         @include lg {
             padding: 10px 12px;
         }
-        @include mmd {
-            font-weight: 600;
-            @include font-20;
-            color: $heading;
-        }
         &:hover,
         &.active {
-            color: $primary;
+            color: $white;
         }
     }
     &-actions {
-        grid-gap: 12px;
-        // @media (max-width: 991px) {
-        //     padding-right: 52px;
-        // }
+        grid-gap: 32px;
+        @include lg {
+            grid-gap: 24px;
+        }
+        @include md {
+            grid-gap: 16px;
+        }
         @include sm {
             grid-gap: 8px;
         }
     }
-    & .btn {
-        --bs-btn-border-width: 1px !important;
-        --bs-btn-padding-x: 20px !important;
-        --bs-btn-padding-y: 7px !important;
-        &:not(.bg-primary) {
-            border-color: $primary !important;
-            color: $primary !important;
-            &:hover {
-                color: $white !important;
-            }
+    & .social-link {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        @include font-32;
+        &:hover {
+            color: $primary;
         }
     }
     &-toggler {
@@ -123,9 +101,6 @@
             height: var(--width);
             @include sm {
                 --width: 32px;
-            }
-            @include ssm {
-                --width: 26px;
             }
         }
     }

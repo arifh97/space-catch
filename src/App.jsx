@@ -4,7 +4,6 @@ import About from './components/About'
 import Tokenomics from './components/Tokenomics'
 import AboutVideo from './components/AboutVideo'
 import Roadmap from './components/Roadmap'
-import Team from './components/Team'
 import Faq from './components/Faq'
 import Footer from './components/Footer'
 
@@ -17,7 +16,6 @@ export default function App() {
       <Tokenomics />
       <AboutVideo />
       <Roadmap />
-      <Team />
       <Faq />
       <Footer />
     </>

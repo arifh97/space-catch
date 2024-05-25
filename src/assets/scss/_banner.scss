@@ -1,7 +1,33 @@
 .banner {
     padding-top: var(--padding-top, 220px);
     padding-bottom: var(--padding-bottom, 170px);
+    background: linear-gradient(255deg, rgba(13, 20, 32, 0.20) 61.79%, #0D1420 98.15%);
     &-img {
         padding-bottom: 100%;
+    }
+    &-content {
+        & h1 {
+            font-size: 80px;
+            line-height: 120%;
+            margin-bottom: 30px;
+        }
+        & p {
+            font-size: 32px;
+            line-height: 140%;
+        }
+        & .btn {
+            & span {
+                --width: 32px;
+                width: var(--width);
+                height: var(--width);
+                background-color: #FFE29B;
+                font-size: 12px;
+            }
+        }
+    }
+    &-inner {
+        padding: 28px 54px;
+        --bs-border-radius: 20px;
+        background-color: rgba(39, 45, 54, 0.90);
     }
 }

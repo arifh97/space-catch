@@ -1,14 +1,38 @@
 .tokenomics {
-    background-color: $bg;
     background-image: url('../img/tokenBg.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-    &-wrapper{
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        --width: 34px;
+        width: var(--width);
+        height: var(--width);
+        background-color: #E5CF63;
+        border-radius: 6px;
+    }
+    & .shape {
+        &-1 {
+            bottom: 116px;
+        }
+        &-2 {
+            & svg {
+                height: 118px;
+                width: 200px;
+            }
+        }
+    }
+    &-wrapper {
         position: relative;
         z-index: 1;
         padding: 136px 0px 136px 96px;
-        & .tokenContentBG img{
+        & .tokenContentBG img {
             position: absolute;
             left: 0;
             top: 0;
@@ -16,13 +40,12 @@
             height: 100%;
             z-index: -1;
         }
-        
         & h2 {
             @include font-48;
             color: $white;
             line-height: 100%;
             margin-bottom: 40px;
-            span{
+            span {
                 color: #E5CF63;
             }
         }
@@ -94,8 +117,7 @@
     &-logo {
         transform: translate(-50%, -50%);
     }
-
-    .tokenomics-percentage-item:hover .dot svg path{
-        fill:black
+    .tokenomics-percentage-item:hover .dot svg path {
+        fill: black
     }
 }

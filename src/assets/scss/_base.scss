@@ -129,8 +129,8 @@ input[type=number] {
 .btn {
     background: conic-gradient(from var(--deg, 0deg) at 50% 50%, #EEE578 0deg, #D3A034 360deg);
     color: $black !important;
-    --bs-btn-padding-y: 10px;
-    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 12px;
+    --bs-btn-padding-x: 40px;
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
@@ -160,6 +160,10 @@ input[type=number] {
 
 #root {
     overflow: hidden;
+}
+
+:root {
+    scroll-behavior: auto !important;
 }
 
 .container {

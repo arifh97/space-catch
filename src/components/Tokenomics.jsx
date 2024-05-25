@@ -8,7 +8,7 @@ import tokenImg from '../assets/img/token-img.png'
 import tokenContentBG from '../assets/img/tokenContentBG.png'
 import CommonTitle from "./CommonTitle";
 
-export default function tokenomics() {  
+export default function tokenomics() {
   const tokenData = [
     {
       name: 'Liquidity',
@@ -47,14 +47,14 @@ export default function tokenomics() {
         borderColor: '#CDEEFF',
         borderWidth: 0,
         hoverOffset: 0,
-        borderRadius:0,
-        cutout:"70%"
+        borderRadius: 0,
+        cutout: "70%"
       },
     ],
   };
 
   const options = {
-    offset:0,
+    offset: 0,
     responsive: true,
     maintainAspectRatio: true,
     aspectRatio: 1,
@@ -72,18 +72,32 @@ export default function tokenomics() {
   return (
     <div className='tokenomics common-padding'>
       <Container>
-        <Row className='tokenomics-wrapper align-items-center'>
+        <Row className='tokenomics-wrapper align-items-center position-relative'>
           <figure className="tokenContentBG">
             <img src={tokenContentBG} alt="" />
           </figure>
+          <div className="shape-1 position-absolute w-auto h-auto px-0 ms-3">
+            <svg width="701" height="300" viewBox="0 0 701 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M694.645 6.00379H551.05C436.115 -0.143393 495.358 162.48 464.555 221.854C439.424 270.295 368.503 294.702 334.444 294.702H66.7606H5" stroke="#E5CF63" strokeWidth="2" />
+              <circle cx="695.094" cy="5.80566" r="5" fill="#E5CF63" />
+              <circle cx="5" cy="294.702" r="5" fill="#E5CF63" />
+            </svg>
+          </div>
+          <div className="shape-2 position-absolute end-0 w-auto h-auto px-0 mt-4">
+            <svg width="188" height="111" viewBox="0 0 188 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.13281 5.187H40.1521C53.1919 4.78697 80.7821 10.2328 86.8239 35.2166C87.7423 40.4608 89.7384 52.0637 90.3754 56.5223C91.4504 69.9885 100.328 97.3077 126.951 104.561C128.249 104.914 128.898 105.091 130.878 105.356C132.858 105.621 134.163 105.621 136.774 105.621H182.817" stroke="#E5CF63" strokeWidth="2" />
+              <circle cx="5.13281" cy="5.16699" r="5" fill="#E5CF63" />
+              <circle cx="182.816" cy="105.621" r="5" fill="#E5CF63" />
+            </svg>
+          </div>
           <Col lg={6} >
-            <h2>Tokeno<span>mics</span></h2>       
+            <h2>Tokeno<span>mics</span></h2>
             <div className="tokenomics-percentage">
               {tokenData.map((item, index) => (
-                <div className="tokenomics-percentage-item" key={index} data-aos="fade-up" data-aos-duration={`1${index+6}00`}>
-                  <div className="dot"  style={{ backgroundColor: item.color }}>
+                <div className="tokenomics-percentage-item" key={index} data-aos="fade-up" data-aos-duration={`1${index + 6}00`}>
+                  <div className="dot" style={{ backgroundColor: item.color }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="none">
-                      <path d="M21.6853 1.27821L7.89717 14.768L0.712891 7.73316L1.87373 6.5985L7.89717 12.4735L20.5245 0.143555L21.6853 1.27821Z" fill="white"/>
+                      <path d="M21.6853 1.27821L7.89717 14.768L0.712891 7.73316L1.87373 6.5985L7.89717 12.4735L20.5245 0.143555L21.6853 1.27821Z" fill="white" />
                     </svg>
                   </div>
                   <div className="text">

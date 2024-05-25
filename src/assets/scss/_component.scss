@@ -9,17 +9,18 @@
 
 .accordion {
     &-item {
-        --bs-accordion-border-radius: 0;
         --bs-accordion-bg: transparent;
         --bs-accordion-border-color: #2D2D2C;
-        --bs-accordion-btn-bg: #fff;
-        --bs-accordion-active-bg: #fff;
-        --padding: 30px;
+        --bs-accordion-btn-bg: transparent;
+        --bs-accordion-active-bg: transparent;
+        --padding: 28px;
         border: none;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 10px !important;
+        padding: 0 var(--padding);
+        background-color: $white;
         @include md {
-            --padding: 26px;
+            --padding: 24px;
         }
         @include sm {
             --padding: 20px;
@@ -30,26 +31,24 @@
     }
     &-button {
         box-shadow: 0 0 0 !important;
-        @include font-22;
-        font-weight: 600;
-        color: $heading !important;
-        padding: var(--padding);
-        &:not(.collapsed) {
-            padding-bottom: calc(var(--padding) / 4 * 3);
-        }
+        font-size: 18px;
+        line-height: 120%;
+        font-weight: 400;
+        color: $black !important;
+        padding: var(--padding) 0;
         &::after {
-            align-items: flex-start;
-            --bs-accordion-btn-icon-width: 32px;
-            --bs-accordion-btn-icon: url("data:image/svg+xml;charset=UTF-8, %3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='32' height='32' rx='16' fill='%232E2E2E'/%3e%3cpath d='M22.0392 12.6419C21.861 12.4638 21.6195 12.3637 21.3676 12.3637C21.1157 12.3637 20.8742 12.4638 20.696 12.6419L15.9942 17.3437L11.2924 12.6419C11.1132 12.4688 10.8733 12.3731 10.6242 12.3753C10.3752 12.3774 10.1369 12.4773 9.96081 12.6534C9.7847 12.8295 9.68481 13.0678 9.68264 13.3168C9.68048 13.5659 9.77622 13.8058 9.94924 13.985L15.3226 19.3584C15.5008 19.5364 15.7423 19.6365 15.9942 19.6365C16.2461 19.6365 16.4876 19.5364 16.6658 19.3584L22.0392 13.985C22.2172 13.8068 22.3173 13.5653 22.3173 13.3134C22.3173 13.0615 22.2172 12.82 22.0392 12.6419Z' fill='white'/%3e%3c/svg%3e ");
-            --bs-accordion-btn-active-icon: var(--bs-accordion-btn-icon);
+            transform: none !important;
+            background-position: center;
+            --bs-accordion-btn-icon-width: 20px;
+            --bs-accordion-btn-icon: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3e%3cpath opacity='0.7' d='M18.0963 11.2696H11.3976V17.9683C11.3976 18.3236 11.2564 18.6644 11.0052 18.9157C10.7539 19.1669 10.4132 19.3081 10.0578 19.3081C9.70252 19.3081 9.36175 19.1669 9.1105 18.9157C8.85925 18.6644 8.7181 18.3236 8.7181 17.9683V11.2696H2.01942C1.6641 11.2696 1.32334 11.1285 1.07209 10.8772C0.820838 10.626 0.679688 10.2852 0.679688 9.92991C0.679688 9.57459 0.820838 9.23382 1.07209 8.98257C1.32334 8.73132 1.6641 8.59017 2.01942 8.59017H8.7181V1.89149C8.7181 1.53617 8.85925 1.19541 9.1105 0.944157C9.36175 0.692908 9.70252 0.551758 10.0578 0.551758C10.4132 0.551758 10.7539 0.692908 11.0052 0.944157C11.2564 1.19541 11.3976 1.53617 11.3976 1.89149V8.59017H18.0963C18.4516 8.59017 18.7923 8.73132 19.0436 8.98257C19.2948 9.23382 19.436 9.57459 19.436 9.92991C19.436 10.2852 19.2948 10.626 19.0436 10.8772C18.7923 11.1285 18.4516 11.2696 18.0963 11.2696Z' fill='black'/%3e%3c/svg%3e");
+            --bs-accordion-btn-active-icon: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect opacity='0.7' y='7' width='18.7563' height='2.805' rx='1.4025' fill='black'/%3e%3c/svg%3e ");
         }
     }
     &-body {
-        padding: var(--padding) !important;
-        padding-top: 0 !important;
         background-color: var(--bs-accordion-active-bg);
+        padding: var(--padding) 0;
+        border-top: 1px solid #827A7A;
         & p {
-            color: currentColor;
             font-size: 1rem;
             color: $black;
             font-weight: 500;

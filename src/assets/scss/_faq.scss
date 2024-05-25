@@ -1,0 +1,29 @@
+.faq {
+    & .common-title {
+        margin-bottom: 80px;
+        @include md {
+            margin-bottom: 60px;
+        }
+        @include sm {
+            margin-bottom: 44px;
+        }
+    }
+    &-wrap {
+        border-radius: 16px;
+        padding: 30px;
+        background: linear-gradient(97deg, #FFF2B4 1.44%, rgba(254, 243, 190, 0.20) 96.25%);
+        &::before {
+            content: "";
+            width: 370px;
+            height: 500px;
+            background-color: #E5CF63;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(32deg);
+            z-index: -1;
+            filter: blur(250px);
+        }
+    }
+}

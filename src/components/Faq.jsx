@@ -26,17 +26,19 @@ export default function Faq() {
       <Container>
         <Row>
           <Col xs={12}>
-            <CommonTitle title="" />
-            <Accordion defaultActiveKey="0">
-              {faq.map((item, index) => (
-                <Accordion.Item eventKey={`${index}`} key={index}>
-                  <Accordion.Header>{item.title}</Accordion.Header>
-                  <Accordion.Body>
-                    <p>{item.des}</p>
-                  </Accordion.Body>
-                </Accordion.Item>
-              ))}
-            </Accordion>
+            <CommonTitle className="text-center" title="Frequently Asked QUestion" />
+            <div className="faq-wrap position-relative">
+              <Accordion defaultActiveKey="0">
+                {faq.map((item, index) => (
+                  <Accordion.Item eventKey={`${index}`} key={index}>
+                    <Accordion.Header>{item.title}</Accordion.Header>
+                    <Accordion.Body>
+                      <p>{item.des}</p>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                ))}
+              </Accordion>
+            </div>
           </Col>
         </Row>
       </Container>

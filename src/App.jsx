@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import About from './components/About'
 import Tokenomics from './components/Tokenomics'
+import AboutVideo from './components/AboutVideo'
 import Roadmap from './components/Roadmap'
 import Team from './components/Team'
 import Faq from './components/Faq'
@@ -14,6 +15,7 @@ export default function App() {
       <Banner />
       <About />
       <Tokenomics />
+      <AboutVideo />
       <Roadmap />
       <Team />
       <Faq />

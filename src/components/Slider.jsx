@@ -5,14 +5,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 
 import img_1 from '../assets/img/banner/1.png'
 import img_2 from '../assets/img/banner/2.png'
 import img_3 from '../assets/img/banner/3.png'
 import img_4 from '../assets/img/banner/4.png'
-
-// import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Slider() {
     const banner = [img_1, img_2, img_3, img_4];
@@ -22,11 +20,11 @@ export default function Slider() {
                 className='testimonial-slider'
                 slidesPerView={1}
                 spaceBetween={0}
-                // }}
                 autoplay={{
-                    delay: 3000,
+                    delay: 10000,
                     disableOnInteraction: false,
                 }}
+                effect={'fade'}
                 centeredSlides={false}
                 pagination={{
                     clickable: true,
@@ -34,7 +32,7 @@ export default function Slider() {
                 grabCursor={true}
                 navigation={false}
                 loop={true}
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination, Autoplay, EffectFade]}
             >
                 {banner.map((item, index) => (
                     <SwiperSlide key={index}>

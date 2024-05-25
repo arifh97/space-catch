@@ -3,7 +3,10 @@
     padding-bottom: var(--padding-bottom, 170px);
     background: linear-gradient(255deg, rgba(13, 20, 32, 0.20) 61.79%, #0D1420 98.15%);
     &-img {
-        padding-bottom: 100%;
+        padding-bottom: calc(62% - 14px);
+        @media (min-width: 2300px) {
+            background-size: cover;
+        }
     }
     &-content {
         & h1 {
@@ -25,9 +28,83 @@
             }
         }
     }
+    &-wrap {
+        padding-left: 8%;
+    }
     &-inner {
-        padding: 28px 54px;
+        padding: 30px;
         --bs-border-radius: 20px;
-        background-color: rgba(39, 45, 54, 0.90);
+        background-color: rgba($color: #272D36, $alpha: .90);
+        backdrop-filter: blur(10px);
+        & h4 {
+            @include font-24;
+        }
+        & h5 {
+            @include font-20;
+        }
+        & .total {
+            &::before,
+            &::after {
+                content: "";
+                width: calc(28% - 16px);
+                height: 1px;
+                background-color: $white;
+            }
+        }
+        & .btn {
+            @include font-24;
+            border-radius: 10px;
+        }
+        & .form-control {
+            padding: 19px 24px;
+            color: rgba($color: $white, $alpha: .65);
+        }
+    }
+    &-time {
+        grid-template-columns: repeat(var(--count, 4), minmax(0, 1fr));
+        gap: 30px;
+        @include lg {
+            gap: 24px;
+        }
+    }
+    &-timer {
+        --width: 70px;
+        width: var(--width);
+        height: var(--width);
+        &-inner {
+            --width: 56px;
+            width: var(--width);
+            height: var(--width);
+            & strong {
+                @include font-20;
+            }
+            & span {
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+.methods {
+    &-card {
+        --bs-border-radius: 10px;
+        padding: 14px 16px;
+        cursor: pointer;
+    }
+}
+
+.swiper {
+    &-pagination {
+        --swiper-pagination-top: calc(100% - 70px);
+        &-bullet {
+            --swiper-pagination-bullet-width: 48px;
+            --swiper-pagination-bullet-height: 10px;
+            --swiper-pagination-bullet-border-radius: 106px;
+            background-color: rgba(229, 207, 99, 0.50);
+            opacity: 1;
+            &-active {
+                background-color: rgba(229, 207, 99, 1);
+            }
+        }
     }
 }

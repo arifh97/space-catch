@@ -18,7 +18,7 @@ export default function Social({ className }) {
     <ul className={`social-list d-flex align-items-center flex-wrap gap-3 ${className}`}>
       {socialIcons.map((item, index) => (
         <li key={index}>
-          <a href={item.url} data-aos="fade-up" data-aos-duration="1800" data-aos-delay="" data-aos-offset="0"target="_blank" className="social-link rounded-pill d-flex align-items-center justify-content-center">
+          <a href={item.url} target="_blank" className="social-link rounded-pill d-flex align-items-center justify-content-center">
             {item.icon}
           </a>
         </li>

@@ -30,7 +30,7 @@ export default function Faq() {
             <div className="faq-wrap position-relative">
               <Accordion defaultActiveKey="0">
                 {faq.map((item, index) => (
-                  <Accordion.Item eventKey={`${index}`} key={index}>
+                  <Accordion.Item eventKey={`${index}`} key={index}  data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}>
                     <Accordion.Header>{item.title}</Accordion.Header>
                     <Accordion.Body>
                       <p>{item.des}</p>

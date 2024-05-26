@@ -73,7 +73,7 @@ export default function Header() {
                 ))}
               </ul>
             </nav>
-            <div className="heading-actions d-flex align-items-center flex-wrap ms-auto ms-lg-0">
+            <div className="heading-actions d-flex align-items-center flex-wrap ms-auto">
               <div className='d-none d-xl-block'><Social /></div>
               <a target='_blank' href='' className='btn'>STAKING</a>
               <button className="heading-toggler d-lg-none" onClick={() => setIsMenu(!isMenu)}>

@@ -94,7 +94,7 @@ export default function tokenomics() {
             <h2>Tokeno<span>mics</span></h2>
             <div className="tokenomics-percentage">
               {tokenData.map((item, index) => (
-                <div className="tokenomics-percentage-item" key={index} data-aos="fade-up" data-aos-duration={`1${index + 6}00`}>
+                <div className="tokenomics-percentage-item" key={index} data-aos="fade-up" data-aos-duration="" data-aos-delay={`${index+1}00`}>
                   <div className="dot" style={{ backgroundColor: item.color }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" viewBox="0 0 22 15" fill="none">
                       <path d="M21.6853 1.27821L7.89717 14.768L0.712891 7.73316L1.87373 6.5985L7.89717 12.4735L20.5245 0.143555L21.6853 1.27821Z" fill="white" />

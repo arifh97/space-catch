@@ -44,14 +44,14 @@ export default function Roadmap() {
       <Container>
         <Row className='justify-content-center'>
           <Col xs={12} md={8} lg={6}>
-            <div className='roadmap-title'>
+            <div className='roadmap-title' data-aos="fade-up" data-aos-offset="" data-aos-delay="">
               <h2 className='mb-0 text-center text-uppercase'>Roadmap</h2>
             </div>
           </Col>
         </Row>
         <Row className='align-items-xl-end roadmap-wrap'>
           {roadmap.map((item, index) => (
-            <Col xs={12} md={6} xl={3} key={index}>
+            <Col xs={12} md={6} xl={3} key={index} data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}>
               <div className={`roadmap-item p-3 ${index == 0 || index == roadmap.length - 1 ? 'py-big d-flex flex-column justify-content-center' : ''}`}>
                 <div className="text-center title mb-3 pb-1 pb-md-2 mb-lg-4 pb-lg-3">
                   <h4 className='ff-1 fw-bold mb-0 text-white'>{item.title}{index + 1}</h4>

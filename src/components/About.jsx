@@ -19,7 +19,7 @@ export default function About() {
   return (
     <div className="about" id='about'>
       <Container>
-        <Row className="section-title text-center text-lg-start">
+        <Row className="section-title text-center text-lg-start" data-aos="fade-up" data-aos-offset="" data-aos-delay="">
           <Col lg={6}>
             <h2>SPACECATCH THE NEXT-GENERATION AR GAME</h2>
           </Col>
@@ -29,7 +29,7 @@ export default function About() {
         </Row>
         <Row className='justify-content-center align-items-end'>
           <Col lg={6} className="order-2 order-lg-1">
-            <div className="about-left">              
+            <div className="about-left" data-aos="fade-right" data-aos-offset="" data-aos-delay="">              
               <figure className="aboutImg m-0">
                 <img src={aboutImg} alt="" />
               </figure>
@@ -38,7 +38,7 @@ export default function About() {
           <Col lg={6} className="order-1 order-lg-2 text-center text-lg-start">
             <div className="about-content">
               {aboutContent.map((item, index)=>(
-                <div className="single-item" key={index}>
+                <div className="single-item" key={index}  data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
                 </div>

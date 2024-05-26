@@ -82,13 +82,13 @@ export default function Footer() {
         <Row>
           <Col xs={12}>
             <div className="footer-wrap d-flex flex-wrap justify-content-between">
-              <div className="footer-item">
+              <div className="footer-item" data-aos="fade-up" data-aos-offset="" data-aos-delay="">
                 <Logo />
                 <Social />
                 <a href="mailto:contact@gamin.io" className='opacity-1'>Email: contact@gamin.io</a>
               </div>
               {items.map((item, index) => (
-                <div className="footer-item" key={index}>
+                <div className="footer-item" key={index}  data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}>
                   <h4 className='mb-2 pb-1 mb-md-3 pb-md-2 text-white fw-medium ff-1'>{item.title}</h4>
                   <ul>
                     {item.links.map((link, index) => (
@@ -107,7 +107,7 @@ export default function Footer() {
           </Col>
         </Row>
       </Container>
-      <div className="footer-copyright border-top border-white">
+      <div className="footer-copyright border-top border-white" data-aos="fade-up" data-aos-offset="" data-aos-delay="">
         <Container fluid>
           <Row>
             <Col xs={12} className='text-center'>

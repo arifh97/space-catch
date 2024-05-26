@@ -55,7 +55,7 @@ export default function Team() {
         </Row>
         <Row className='team-wrap'>
           {team.map((item,index) => (
-            <Col xs={6} lg={4} xl={3} key={index}>
+            <Col xs={6} lg={4} xl={3} key={index} data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}>
               <div className="team-item text-center">
                 <div className="team-img mx-auto"><img src={item.img} alt="" /></div>
                 <h4 className='fw-medium ff-1 mb-2 text-white'>{item.title}</h4>

@@ -20,7 +20,7 @@ export default function Brands() {
         <Row>
           <Col xs={12}>
             <div className="brands-title">
-              <h2 className='mb-0 mb-md-2'>PARTNERS</h2>
+              <h2 className='mb-0 mb-md-2' data-aos="fade-up" data-aos-offset="" data-aos-delay="">PARTNERS</h2>
               <svg width="233" height="6" viewBox="0 0 233 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="20.3281" y1="0.878418" x2="212.67" y2="0.878418" stroke="url(#paint0_linear_0_421)" />
                 <line x1="0.5" y1="4.87842" x2="232.5" y2="4.87841" stroke="url(#paint1_linear_0_421)" />
@@ -47,7 +47,7 @@ export default function Brands() {
       <div className="brands-wrap bg-primary">
         <Marquee speed={50} autoFill={true}>
           {brands.map((item, index) => (
-            <div className="brands-item" key={index}><img src={item} alt="" /></div>
+            <div className="brands-item" key={index} data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}><img src={item} alt="" /></div>
           ))}
         </Marquee>
       </div>

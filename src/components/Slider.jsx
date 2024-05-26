@@ -21,7 +21,7 @@ export default function Slider() {
                 slidesPerView={1}
                 spaceBetween={0}
                 autoplay={{
-                    delay: 6000,
+                    delay: 10000,
                     disableOnInteraction: false,
                 }}
                 effect={'fadeOut'}

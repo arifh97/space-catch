@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Banner from './components/Banner'
+import Brands from './components/Brands'
 import About from './components/About'
 import Tokenomics from './components/Tokenomics'
 import AboutVideo from './components/AboutVideo'
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <Header />
       <Banner />
+      <Brands />
       <About />
       <Tokenomics />
       <AboutVideo />

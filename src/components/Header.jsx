@@ -55,7 +55,7 @@ export default function Header() {
         <Container>
           <div className='heading-wrap d-flex align-items-center'>
             <Logo />
-            <nav className={`heading-menu me-auto ${isMenu ?'show-menu':''}`}>
+            <nav className={`heading-menu ${isMenu ?'show-menu':''}`}>
               <div className="title d-flex align-items-center justify-content-between d-lg-none">
                 <Logo />
                 <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
@@ -73,8 +73,8 @@ export default function Header() {
                 ))}
               </ul>
             </nav>
-            <div className="heading-actions d-flex align-items-center flex-wrap">
-              <Social />
+            <div className="heading-actions d-flex align-items-center flex-wrap ms-auto ms-lg-0">
+              <div className='d-none d-xl-block'><Social /></div>
               <a target='_blank' href='' className='btn'>STAKING</a>
               <button className="heading-toggler d-lg-none" onClick={() => setIsMenu(!isMenu)}>
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

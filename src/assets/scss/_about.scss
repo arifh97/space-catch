@@ -3,6 +3,19 @@
     border-bottom: 27px solid #E5CF63;
     position: relative;
     z-index: 1;
+    @include xl {
+        padding-top: 160px;
+    }
+    @include lg {
+        padding-top: 140px;
+    }
+    @include md {
+        padding-top: 110px;
+    }
+    @include sm {
+        padding-top: 80px;
+        border-bottom-width: 15px;
+    }
     &:before {
         position: absolute;
         content: "";
@@ -93,6 +106,10 @@
             border-radius: 20px;
             overflow: hidden;
             border: 5px solid #111622;
+            background-color: $bg;
+            @include sm {
+                padding-bottom: 70%;
+            }
             &>div {
                 position: absolute;
                 top: 0;
@@ -104,7 +121,7 @@
             width: var(--width);
             height: var(--width);
             @include transition;
-            @include sm {
+            @include mmd {
                 --width: 80px;
             }
             &:hover {

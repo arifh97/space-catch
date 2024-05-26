@@ -27,10 +27,10 @@ export default function About() {
             <p>Introducing SPACECATCH, the cutting-edge AR gaming experience poised to revolutionize how we interact with the virtual world. </p>
           </Col>
         </Row>
-        <Row className='justify-content-center'>
+        <Row className='justify-content-center align-items-end'>
           <Col lg={6} className="order-2 order-lg-1">
             <div className="about-left">              
-              <figure className="aboutImg">
+              <figure className="aboutImg m-0">
                 <img src={aboutImg} alt="" />
               </figure>
             </div>

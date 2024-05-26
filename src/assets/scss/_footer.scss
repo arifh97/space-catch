@@ -13,8 +13,16 @@
     }
     &-wrap {
         padding: 60px 0;
+        @include sm {
+            padding: 40px 0;
+            gap: 24px;
+        }
     }
     &-item {
+        @include sm {
+            width: calc(50% - 24px);
+            flex: 0 0 auto;
+        }
         & .social-list {
             margin-top: 30px;
             margin-bottom: 20px;

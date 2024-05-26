@@ -76,22 +76,6 @@ input[type=number] {
 }
 
 .common {
-    // &-svg {
-    //     display: inline-block;
-    //     height: 1em;
-    //     overflow: visible;
-    //     vertical-align: -0.125em;
-    // }
-    // &-row {
-    //     --bs-gutter-x: 32px;
-    //     margin-bottom: calc(var(--bs-gutter-x) * -1);
-    //     @include mmd {
-    //         --bs-gutter-x: 24px;
-    //     }
-    //     &>div {
-    //         margin-bottom: var(--bs-gutter-x);
-    //     }
-    // }
     &-padding {
         --padding-y: 150px;
         --padding-x: 0;
@@ -120,9 +104,6 @@ input[type=number] {
         & h2 {
             @include font-42;
         }
-        // & p {
-        //     @include font-20;
-        // }
     }
 }
 
@@ -130,7 +111,7 @@ input[type=number] {
     background: conic-gradient(from var(--deg, 0deg) at 50% 50%, #EEE578 0deg, #D3A034 360deg);
     color: $black !important;
     --bs-btn-padding-y: 12px;
-    --bs-btn-padding-x: 40px;
+    --bs-btn-padding-x: 35px;
     text-transform: uppercase;
     border: none;
     border-radius: 5px;

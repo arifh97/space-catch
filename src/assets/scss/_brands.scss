@@ -1,0 +1,103 @@
+.brands {
+    margin-top: -125px;
+    @include xl {
+        margin-top: -99px;
+    }
+    @include md {
+        margin-top: -40px;
+    }
+    @include sm {
+        margin-top: -1px;
+    }
+    &-shape {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        & svg {
+            width: var(--width, 630px);
+            height: auto;
+            @include xl {
+                --width: 500px
+            }
+            @include lg {
+                --width: 320px;
+            }
+            @include md {
+                --width: 280px;
+            }
+        }
+    }
+    &-title {
+        padding-top: 32px;
+        position: relative;
+        z-index: 2;
+        @include xl {
+            padding-top: 20px;
+        }
+        @include lg {
+            padding-top: 20px;
+        }
+        @include md {
+            padding-top: 16px;
+        }
+        @include sm {
+            padding-top: 24px;
+            text-align: center;
+            & svg {
+                width: 100%;
+            }
+        }
+    }
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        padding: 50px 0;
+        @include xl {
+            padding: 40px 0;
+        }
+        @include lg {
+            padding: 34px 0;
+            padding-top: 20px;
+        }
+        @include md {
+            padding: 28px 0;
+        }
+        @include sm {
+            padding: 20px 0;
+        }
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $primary;
+            position: absolute;
+            left: 0;
+            @include lg {
+                top: -30px;
+            }
+            @include md {
+                top: -48px;
+            }
+            @include sm {
+                display: none;
+            }
+        }
+    }
+    &-item {
+        margin-right: 60px;
+        height: 60px;
+        @include lg {
+            height: 50px;
+        }
+        @include md {
+            height: 40px;
+        }
+        @include sm {
+            height: 30px;
+        }
+        & img {
+            height: 100%;
+        }
+    }
+}

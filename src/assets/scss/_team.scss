@@ -1,12 +1,21 @@
 .team {
     & .common-title {
         margin-bottom: 100px;
+        @include md {
+            margin-bottom: 60px;
+        }
+        @include sm {
+            margin-bottom: 40px;
+        }
         & h2 {
             color: $white;
         }
     }
     &-wrap {
         --margin: 70px;
+        @include sm {
+            --margin: 24px;
+        }
         margin-bottom: calc(var(--margin) *-1);
         &>div {
             margin-bottom: var(--margin);
@@ -20,19 +29,38 @@
         border: 6px solid #E5CF63;
         transform: rotate(var(--rotate, 45deg));
         @include img(cover);
+        @include sm {
+            border-width: 3px;
+            border-radius: 16px;
+            --rotate: 0deg;
+            width: 100%;
+            --width: 170px;
+        }
         & img {
-            transform: rotate(var(--rotate, -45deg)) scale(1.4);
+            transform: rotate(var(--rotate, -45deg)) scale(var(--scale, 1.4));
+            @include sm {
+                --rotate: 0deg;
+                --scale: 1;
+            }
         }
     }
     & h4 {
         margin-top: 60px;
         font-size: 28px;
         line-height: 130%;
-        @include sm {
+        @include md {
+            margin-top: 40px;
             font-size: 24px;
+        }
+        @include sm {
+            margin-top: 20px;
+            font-size: 20px;
         }
     }
     & p {
         @include font-20;
+        @include sm {
+            opacity: .5;
+        }
     }
 }

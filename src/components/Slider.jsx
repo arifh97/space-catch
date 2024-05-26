@@ -21,10 +21,10 @@ export default function Slider() {
                 slidesPerView={1}
                 spaceBetween={0}
                 autoplay={{
-                    delay: 10000,
+                    delay: 6000,
                     disableOnInteraction: false,
                 }}
-                effect={'fade'}
+                effect={'fadeOut'}
                 centeredSlides={false}
                 pagination={{
                     clickable: true,

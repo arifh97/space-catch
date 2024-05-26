@@ -31,7 +31,7 @@ export default function About() {
           <Col lg={12}>
             <CommonTitle className="text-center" title="Hivebot Is Now Live" />
           </Col>
-          <Col xs={12} md={10}>
+          <Col xs={12} lg={10}>
             <div className='about-video-wrap' data-aos="fade-up" data-aos-duration="1600">
               <ReactPlayer
                 className="about-video-inner"

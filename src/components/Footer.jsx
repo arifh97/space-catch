@@ -7,7 +7,7 @@ export default function Footer() {
   const items = [
     {
       title: 'Navigation',
-      siPage: true,
+      isPage: true,
       links: [
         {
           name: 'Home',
@@ -33,7 +33,7 @@ export default function Footer() {
     },
     {
       title: 'Quick Links',
-      siPage: false,
+      isPage: false,
       links: [
         {
           name: 'Uniswap',
@@ -59,7 +59,7 @@ export default function Footer() {
     },
     {
       title: 'Social',
-      siPage: false,
+      isPage: false,
       links: [
         {
           name: 'Telegram Community',
@@ -91,12 +91,12 @@ export default function Footer() {
                 <div className="footer-item" key={index}>
                   <h4 className='mb-2 pb-1 mb-md-3 pb-md-2 text-white fw-medium ff-1'>{item.title}</h4>
                   <ul>
-                    {item.links.map((item, index) => (
+                    {item.links.map((link, index) => (
                       <li key={index}>
                         {item.isPage?(
-                          <Link to={item.url} spy={true} smooth={true} duration={600} offset={-100}>{item.name}</Link>
+                          <Link to={link.url} spy={true} smooth={true} duration={600} offset={-100}>{link.name}</Link>
                         ):(
-                          <a href={item.url} className='d-block'>{item.name}</a>
+                          <a href={link.url} className='d-block'>{link.name}</a>
                         )}
                       </li>
                     ))}

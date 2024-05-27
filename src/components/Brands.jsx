@@ -45,11 +45,17 @@ export default function Brands() {
         </Row>
       </Container>
       <div className="brands-wrap bg-primary">
-        <Marquee speed={50} autoFill={true}>
-          {brands.map((item, index) => (
-            <div className="brands-item" key={index} data-aos="fade-up" data-aos-offset="" data-aos-delay={`${index+1}00`}><img src={item} alt="" /></div>
-          ))}
-        </Marquee>
+        <Container>
+          <Row>
+            <Col xs={12} data-aos="fade-up" data-aos-offset="" data-aos-delay={100}>
+              <Marquee speed={50} autoFill={true}>
+                {brands.map((item, index) => (
+                  <div className="brands-item" key={index}><img src={item} alt="" /></div>
+                ))}
+              </Marquee>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </div>
   )

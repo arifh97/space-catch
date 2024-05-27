@@ -67,20 +67,18 @@
             padding: 20px 0;
         }
         &::before {
-            content: "";
             width: 100%;
             height: 100%;
             background-color: $primary;
             position: absolute;
             left: 0;
             @include lg {
+                content: "";
                 top: -30px;
             }
             @include md {
+                content: "";
                 top: -48px;
-            }
-            @include sm {
-                display: none;
             }
         }
     }

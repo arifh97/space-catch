@@ -16,19 +16,19 @@ export default function Header() {
       to: 'about'
     },
     {
-      btn_title: 'TOKEN',
+      btn_title: 'Token',
       to: 'tokenomics'
     },
     {
-      btn_title: 'ROADMAP',
+      btn_title: 'Roadmap',
       to: 'roadmap'
     },
     {
-      btn_title: 'CONTACT',
+      btn_title: 'Contact',
       to: 'contact'
     },
     {
-      btn_title: 'Roadmap',
+      btn_title: 'Whitepaper',
       to: 'roadmap'
     },
   ];
@@ -68,7 +68,7 @@ export default function Header() {
               <ul className="d-lg-flex align-items-center">
                 {navLinks.map((link, index) => (
                   <li key={index} className='d-block'>
-                    <Link className="heading-link" to={link.to} spy={true} smooth={true} duration={600} offset={-100} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
+                    <Link className="heading-link text-capitalize" to={link.to} spy={true} smooth={true} duration={600} offset={-100} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
                   </li>
                 ))}
               </ul>

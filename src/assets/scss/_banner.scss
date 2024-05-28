@@ -1,7 +1,7 @@
 .banner {
     padding-top: var(--padding-top, 220px);
     padding-bottom: var(--padding-bottom, 170px);
-    background: linear-gradient(255deg, rgba(13, 20, 32, var(--opacity, 0.20)) 61.79%, #0D1420 98.15%);
+    background: linear-gradient(255deg, rgba(13, 20, 32, var(--opacity, 0.40)) 61.79%, #0D1420 98.15%);
     @include md {
         --padding-top: 150px;
         --padding-bottom: 120px;
@@ -19,8 +19,27 @@
         }
     }
     &-content {
+        padding-top: var(--pt, 140px);
+        padding-bottom: var(--pb, 280px);
+        @include xxl {
+            --pt: 110px;
+            --pb: 220px;
+        }
+        @include xl {
+            --pt: 100px;
+            --pb: 180px;
+        }
+        @include lg {
+            --pt: 50px;
+            --pb: 150px;
+        }
         @include md {
-            padding: 0 10%;
+            --pt: 40px;
+            --pb: 60px;
+        }
+        @include sm {
+            --pt: 0px;
+            --pb: 0px;
         }
         & h1 {
             font-size: 80px;
@@ -39,6 +58,9 @@
         & p {
             font-size: 32px;
             line-height: 140%;
+            @include xl {
+                font-size: 28px;
+            }
             @include lg {
                 font-size: 24px;
             }
